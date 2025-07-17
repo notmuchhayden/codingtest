@@ -30,10 +30,26 @@ public:
 		if (list1 == nullptr && list2)
 			return list2;
 		
-		ListNode* newlist = nullptr;
+		ListNode *head = *newlist = nullptr;
 		
 		while (list1 || list2) {
-			if (list1->val )
+			
+			
+			
+			if (list1->val < list2->val) {
+				newlist = list1;
+				list1 = list1->next;
+			}
+			else {
+				newlist = list2;
+				list2 = list2->next;
+			}
 		}
     }
+	
+	ListNode* getSmallerOne(ListNode* l1, ListNode* l2) {
+		if (list1 && list2 == nullptr) {
+			
+		}
+	}
 };
